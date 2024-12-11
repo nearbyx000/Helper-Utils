@@ -20,15 +20,15 @@ install_packages() {
     case "$1" in
         ubuntu|debian|)
             apt update
-            apt install -y tigervnc-standalone-server tigervnc-common
+            apt install -y tigervnc-standalone-server tigervnc-common git build-essential cmake
 
             ;;
         arch)
-            pacman -Sy --noconfirm tigervnc
+            pacman -Sy --noconfirm tigervnc git cmake
             ;;
         fedora|mos)
             dnf update
-            dnf install -y tigervnc-server tigervnc
+            dnf install -y tigervnc-server tigervnc git cmake
             ;;
 
         *)
